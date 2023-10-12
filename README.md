@@ -1,19 +1,16 @@
 # NMS-ShaderCode
+
 Shader code taken from the initial macOS release of No Man's Sky
 
-
-The main difference between .h and .bin seems to be that .bin uses -> syntax while .h uses . syntax
+This fork has stripped .BIN files which do not seem to be used for any builds. Also fixes some file associations.
 
 
 `//TF_BEGIN` and `//TF_END` refer to [The Forge](theforge.dev) and sections enclosed by these commits should be assumed to deal with macOS and iOS (and thus, Metal).
 
-## How to comprehend NMS shaders
+## How to build
 
-NMS shaders are written in GLSL. There are a few types:
+See this gist <https://gist.github.com/VITALISED/2f0ab1ccc67ddffcc7da570d41d159c4>
 
-- standard GLSL (fragment, compute, vertex, geometry...)
-- "common" shaders - treat these like header files
-- .glsl, .hlsl - these should be assumed to come from elsewhere, ie an SDK
-- .shader.bin in the root directory - these are "shader resources"; think of them as sorta like build targets. 
+## What are the root .BIN files about?
 
-(to be continued)
+Not quite sure exactly, but they do contain the build targets for the shaders which you'll need to compile for the game.
